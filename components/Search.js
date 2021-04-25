@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { StyleSheet, View, TextInput, Button } from 'react-native'
+import { StyleSheet, View, TextInput, Button, FlatList, Text } from 'react-native'
 
 class Search extends React.Component{
 
@@ -9,6 +9,10 @@ class Search extends React.Component{
             <View style ={{marginTop : 20}}>
                 <TextInput style = {styles.textinput} placeholder="Titre du Film"/>
                 <Button title="Recherche" onPress={() => {}}/>
+                <FlatList
+                data = {[{key: 'a'},{key : 'b'}]}
+                renderItem = {({item}) => <Text> {item.key} </Text>}
+                />
             </View>
         )
     }
